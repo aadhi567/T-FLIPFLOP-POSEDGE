@@ -1,5 +1,7 @@
 # T-FLIPFLOP-POSEDGE
 
+Developed by:AADHITHAN B RegisterNumber: 212224040001
+
 **AIM:**
 
 To implement  T flipflop using verilog and validating their functionality using their functional tables
@@ -62,7 +64,7 @@ assign q_bar = ~q;
 endmodule
 ```
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by:AADHITHAN B RegisterNumber: 212224040001
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
