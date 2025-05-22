@@ -46,22 +46,21 @@ From the above characteristic table, we can directly write the next state equati
 
 **PROGRAM**
 ```
-module TFLIPFLOPPOSEDGE( input clk, rst_n, input t,
-output reg q,
-output q_bar
-);
-always@(posedge clk) 
-begin 
-if(!rst_n)
-q<=0;
-else
-if(t)
-q<=~q;
-else
-q<=q;
-end
-assign q_bar = ~q;
+module t_ff_ (t, clk, rst, q);
+  input t, clk, rst;
+  output reg q;
+
+  always @(posedge clk or posedge rst) 
+begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else if (t==0)
+      q <= q; 
+     else
+        q<=~q;
+  end
 endmodule
+
 ```
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
